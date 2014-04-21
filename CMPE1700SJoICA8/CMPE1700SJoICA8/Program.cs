@@ -52,18 +52,6 @@ namespace CMPE1700SJoICA8
             return Fresh;
         }
 
-        static public Node Reverse(Node Head)
-        {
-            Node reverse = new Node(Head.Value);
-            while (Head.Next != null)
-            {
-                Head = Head.Next;
-                Node temp = reverse;
-                reverse = new Node(Head.Value);
-                reverse.Next = temp;
-            }
-            return reverse;
-        }
         static void PrintList(Node Head)
         {
             while (Head != null)
@@ -74,6 +62,14 @@ namespace CMPE1700SJoICA8
    
         }
 
+        static void PrintReverse(Node Head)
+        {
+            while (Head != null)
+            {
+                Head = Head.Next;
+                Console.Write(Head.Value + " ");
+            }
+        }
         static void Main(string[] args)
         {
             Random rand = new Random();
